@@ -1,5 +1,5 @@
 import { Router } from "express";
-import UsuarioCtrl from "../usuarioCtrl";
+import UsuarioCtrl from "../usuarioCtrl.js";
 
 
 

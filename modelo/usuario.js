@@ -1,14 +1,14 @@
 import UsuarioDB from "../database/usuarioDB.js";
 
 export default class Usuario {
-    #nome;
     #email;
+    #nome;
     #senha;
     #telefone;
     
-    constructor(nome, email, senha, telefone) {
-        this.#nome = nome;
+    constructor(email, nome, senha, telefone) {
         this.#email = email;
+        this.#nome = nome;
         this.#senha = senha;
         this.#telefone = telefone;
     }
@@ -31,14 +31,15 @@ export default class Usuario {
     }
 
     // Setters
-    set nome(novoNome) {
-        this.#nome = novoNome;
-    }
-
     set email(novoEmail) {
         this.#email = novoEmail;
     }
 
+    set nome(novoNome) {
+        this.#nome = novoNome;
+    }
+
+  
     set senha(novaSenha) {
         this.#senha = novaSenha;
     }
@@ -49,9 +50,9 @@ export default class Usuario {
 
     // Método para converter o objeto em JSON
     toJSON() {
-        return {
-            nome: this.#nome,
+        return {         
             email: this.#email,
+            nome: this.#nome,
             senha: this.#senha,
             telefone: this.#telefone
         };
@@ -62,6 +63,12 @@ export default class Usuario {
         const usuDB = new UsuarioDB();
         await usuDB.gravar(this);
     }
+    
+    async alterar() {
+        const usuDB = new UsuarioDB();
+        await usuDB.alterar(this);
+    }
+    
 
     async excluir() {
         const usuDB = new UsuarioDB();

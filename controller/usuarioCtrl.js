@@ -3,7 +3,7 @@
 // Essa classe será responsável por controlar requisições HTTP para usuários.
 // As requisições HTTP são GET, POST, PUT, DELETE que manipulam usuários.
 
-import Usuario from "../modelo/usuario";
+import Usuario from "../modelo/usuario.js";
 
 export default class UsuarioCtrl {
 
