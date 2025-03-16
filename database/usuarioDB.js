@@ -13,7 +13,7 @@ export default class UsuarioDB {
                 nome VARCHAR(30) NOT NULL PRIMARY KEY,
                 email VARCHAR(35) NOT NULL,
                 senha VARCHAR(10) NOT NULL,    
-                telefone DECIMAL(10)
+                telefone DECIMAL(12)
             )`;
             await conexao.execute(sql);
             await conexao.release();
