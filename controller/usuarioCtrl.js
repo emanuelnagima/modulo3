@@ -18,7 +18,7 @@ export default class UsuarioCtrl {
                 usuario.gravar().then(() => {
                     resposta.status(201).json({
                         status: true,
-                        mensagem: "Cliente gravado com sucesso!"
+                        mensagem: "Usuario gravado com sucesso!"
                     });
                 }).catch((erro) => {
                     resposta.status(500).json({
@@ -51,12 +51,12 @@ export default class UsuarioCtrl {
                 usuario.alterar().then(() => {
                     resposta.status(200).json({
                         status: true,
-                        mensagem: "Cliente alterado com sucesso!"
+                        mensagem: "Usuario alterado com sucesso!"
                     });
                 }).catch((erro) => {
                     resposta.status(500).json({
                         status: false,
-                        mensagem: "Erro ao alterar cliente: " + erro
+                        mensagem: "Erro ao alterar usuario: " + erro
                     });
                 });
             } else {
